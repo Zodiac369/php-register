@@ -10,5 +10,5 @@ CREATE TABLE `users2` (
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-AUTO INCREMENT ID
+AUTO INCREMENT id.
 INDEX user_id, user_name, password in PHPMyAdmin.
