@@ -1,5 +1,5 @@
 # PHP-REGISTER
-PHP MY ADMIN PROJECT.
+PHP MY ADMIN PROJECT. LANG FR
 Make sure to have the database and the right table. 
 
 CREATE TABLE `users2` (
