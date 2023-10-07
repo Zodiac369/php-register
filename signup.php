@@ -5,7 +5,7 @@ include("connection.php");
 include("functions.php");
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
-    // Quelque chose a été posté
+    
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
@@ -14,18 +14,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         // Les champs ont été remplis correctement
 
         if ($password == $confirm_password) {
-            // Le mot de passe est confirmé
+            
             $user_id = random_num(20);
             $query = "insert into users2 (user_id, user_name, password) values ('$user_id', '$user_name', '$password')";
             mysqli_query($con, $query);
             header("Location: login.php");
             die();
         } else {
-            // Le mot de passe n'a pas été confirmé
+            
             echo "Les mots de passe ne correspondent pas.";
         }
     } else {
-        // Les champs n'ont pas été remplis
+        
         echo "Veuillez remplir tous les champs.";
     }
 }
