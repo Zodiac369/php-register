@@ -8,14 +8,14 @@ session_start();
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-		//quelque chose a été posté
+		
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
 
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
 
-			//lire la database
+			
 			$query = "select * from users2 where user_name = '$user_name' limit 1";
 			$query = "select * from users2 where password = '$password' limit 1";
 			$result = mysqli_query($con, $query);
